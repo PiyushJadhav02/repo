@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <title>Portfolio Page</title>
+        <script src="https://kit.fontawesome.com/9b79028ac0.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav class="navigation">
+            <img class="nav-img" alt="" src="images/logo.png">
+            <div class="links">
+                <a href="#header_div" class="nav-link">Home</a>
+                <a href="#container" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Work</a>
+                <a href="#contact" class="navs-link">Contact</a>
+            </div>
+            <a href="#" class="hamenu" onclick="OnSubNav()">
+                <span class="span"></span>
+                <span class="span"></span>
+                <span class="span"></span>
+            </a>
+        </nav>
+        <div class="subnav" id="sub">
+
+            <a href="#contact" class="sub-link" onclick="OnSubNav()">Contact</a>
+            <a href="#projects" class="sub-link" onclick="OnSubNav()">Work</a>
+            <a href="#container" class="sub-link" onclick="OnSubNav()">About</a>
+            <a href="#header_div" class="sub-link" onclick="OnSubNav()">Home</a>
+        </div>
+        <div class="empty" id="e">
+
+        </div>
+        <header class="header" id="header_div">
+            <img src="images/hero-banner.jpg" alt="" class="header-img">
+            <div class="header-text">
+                <p class="header-h1">Hey I am John</p>
+                <p class="header-h2">a web developer</p>
+            </div>
+        </header>
+        <div class="container_div" id="container">
+            <h2 class="container-title">About Us</h2>
+            <div class="container-text">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <br>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <button class="container-b">Read More</button> 
+            </div>       
+        </div>
+        <div class="projects_div" id="projects">
+            <h2 class="project-header">These are some of my projects</h2>
+            <div class="project-tile">
+                <img class="image" alt="" src="images/assignment_05.jpg">
+                <img class="image" alt="" src="images/assignment_08.jpg">
+                <img class="image" alt="" src="images/assignment_10.jpg">
+                <img class="image" alt="" src="images/assignment_16.jpg">
+                <img class="image" alt="" src="images/assignment_17.jpg">
+                <img class="image" alt="" src="images/assignment_18.jpg">
+            </div>
+            <button class="project-button">Show All</button>
+        </div>
+        <div class="contact_div" id="contact">
+            <h2 class="contact-header">Let's work together...</h2>
+            <p class="contact-caption"><em>How do you take your coffee?</em></p>
+            <div class="contact-links">
+                <img class="contact-img" alt="" src="images/facebook-icon.png">
+                <img class="contact-img" alt="" src="images/twitter-icon.png">
+                <img class="contact-img" alt="" src="images/instagram-icon.png">
+            </div>
+        </div>
+        <div class="footer">
+            <p class="footer-text">copyright @2020</p>
+        </div>
+    </body>
+</html>
