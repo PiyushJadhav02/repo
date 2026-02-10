@@ -9,8 +9,10 @@ pipeline {
             }
         }
 	stage('Kubectl'){
-		container('kubectl'){
-			sh 'kubectl get pods'
+		steps{
+			container('kubectl'){
+				sh 'kubectl get pods'
+			}
 		}
 	}
     }
