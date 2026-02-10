@@ -6,9 +6,13 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'echo Running on Kubernetes agent'
-                sh 'kubectl get pods'
             }
         }
+	stage('Kubectl'){
+		container('kubectl'){
+			sh 'kubectl get pods'
+		}
+	}
     }
 }
 
