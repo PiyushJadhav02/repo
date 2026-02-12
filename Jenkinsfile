@@ -2,7 +2,7 @@ pipeline {
     agent {
     	kubernetes{
         	label 'k8s-agent'
-		defaultContainer 'jnlp'
+		defaultContainer 'kubectl'
 	}
     }
     stages {
