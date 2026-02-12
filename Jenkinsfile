@@ -1,11 +1,16 @@
 pipeline {
     agent {
-        label 'k8s-agent'
+    	kubernetes{
+        	label 'k8s-agent'
+		defaultContainer 'jnlp'
+	}
     }
     stages {
         stage('Test') {
             steps {
-                sh 'echo Running on Kubernetes agent'
+                sh 'echo Running'
+		sh 'whoami'
+		sh 'hostname'
             }
         }
 	stage('Kubectl'){
