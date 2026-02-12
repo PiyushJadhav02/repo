@@ -11,6 +11,8 @@ pipeline {
 	stage('Kubectl'){
 		steps{
 			container('kubectl'){
+				sh 'whoami'
+				sh 'kubectl version --client'
 				sh 'kubectl get pods'
 			}
 		}
