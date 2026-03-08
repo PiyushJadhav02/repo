@@ -13,10 +13,10 @@ pipeline {
 				sh 'hostname'
             }
         }
-		stage{
-			container('kubectl'){
-				steps{
-					sh'kubectl get pods -n jenkins'
+		stage('Kubectl'){
+			steps{
+				container('kubectl'){
+					sh 'kubectl get pods -n jenkins'
 				}
 			}
 		}
