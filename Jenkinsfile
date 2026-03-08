@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-    	kubernetes{
-        	label 'my-jenkins-jenkins-agent'
-		defaultContainer 'kubectl'
-	}
-    }
+    agent any
     stages {
         stage('Test') {
             steps {
@@ -13,16 +8,6 @@ pipeline {
 				sh 'hostname'
             }
         }
-		stage('Kubectl'){
-			steps{
-				container('kubectl'){
-					sh 'kubectl get pods -n jenkins'
-					sh 'kubectl create deployment nginx --image=nginx:latest'
-					sh 'kubectl expose deployment nginx --type=NodePort --port=31297'
-					sh 'kubectl port-forward svc/nginx 92:8080'
-				}
-			}
-		}
     }
 }
 
