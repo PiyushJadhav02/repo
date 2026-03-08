@@ -6,6 +6,7 @@ pipeline {
                 sh 'echo Running'
 				sh 'whoami'
 				sh 'hostname'
+				sh 'systemctl status jenkins'
             }
         }
     }
